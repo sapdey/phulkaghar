@@ -4,13 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phulka Ghar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: #000;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .img-1 {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_533,h_350,c_fill/amq4fbkjxzhhqtxdoqto');
+        }
+        .img-2 {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_533,h_350,c_fill/zujx74gb7cryudluomix');
+        }
+        .img-3 {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_533,h_350,c_fill/ombjyly06kv8dgeyk1wc');
+        }
+        .img{
+            height: 50vh;
+            width: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .heading{
+            text-align: center;
+            font-size: 2rem;
+            width: 300px;
+            margin: 1rem auto;
+        }
+        .sub-head {
+            text-align: center;
+            font-size: 1.25rem;
+            width: 300px;
+            margin: 1rem auto;
+        }
+        .flickity-page-dots .dot {
+            background-color: #ffffff;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .heading-2 {
+            margin: 1rem;
+            text-align: center;
+        }
+        .zomato, .swiggy {
+            width: 10rem;
+            height: 2.5rem;
+            font-size: 1.25rem;
+            background-color: #cb202d;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiggy {
+            background-color: #fc8019;
+        }
+    </style>
 </head>
 <body>
-<a href="https://www.swiggy.com/restaurants/phulka-ghar-btm-bangalore-280844">Swiggy</a>
-<a href="https://www.zomato.com/bangalore/phulka-ghar-koramangala-7th-block-bangalore/order">Zomato</a>
-    <a href="zomato://restaurant/19307919/order">Zomato mobile</a>
-    <a href="swiggy://explore?restaurant=phulka%20ghar">swiggy deeplink</a>
-     <a href="swiggy://r/280844">Test</a>
+    <div class="carousel js-flickity" data-flickity-options='{ "cellAlign": "center", "contain": true, "autoPlay": 2000, "prevNextButtons": false }'>
+        <div class="carousel-image">
+            <div class="img img-1"></div>
+            <div class="heading">Rice Bowls</div>
+            <div class="sub-head">Time stand stil while you savour this hearty flavourful Shahi Paneer bowl topped with cream, ghee tadka of red chilles, roasted cumin and served with white rice</div>
+        </div>
+        <div class="carousel-image">
+            <div class="img img-2"></div>
+            <div class="heading">Chole Bhature</div>
+            <div class="sub-head">The Authentic Punjabi style combo consisting of fluffy Bathura and delicious chole.</div>
+        </div>
+        <div class="carousel-image">
+            <div class="img img-3"></div>
+            <div class="heading">Butter Chicken</div>
+            <div class="sub-head">One of the most popular Punjabi style Chicken dish in the world, cooked in tomato puree, cream, butter and host of Chef's special masalas.</div>
+        </div>
+    </div>
+
+    <br />
+    <div class="heading-2">Shop on Swiggy & Zomato</div>
+    <div class="btn-container">
+        <a href="zomato://restaurant/19307919/order" class="zomato">Try on ZOMATO</a>
+        <a href="swiggy://explore?restaurant=phulka%20ghar" class="swiggy">Try on SWIGGY</a>
+    </div>
     
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>
