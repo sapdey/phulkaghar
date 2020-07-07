@@ -109,7 +109,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-68488662-6');
         function handleClick(type) {
-            return gtag('event', 'purchase', {'event_label' : type});
+            return gtag('event', 'pageview', {'event_category' : 'Client', 'event_label' : type});
         }
     </script>
 </body>
