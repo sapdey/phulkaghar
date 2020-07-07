@@ -72,6 +72,38 @@
         .swiggy {
             background-color: #fc8019;
         }
+        .zomato::before, .swiggy:before {
+            content: 'ZOMATO';
+            width: 9.25rem;
+            height: 2.05rem;
+            border-radius: 20px;
+            border: 2.5px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiggy::before {
+            content: 'SWIGGY';
+        }
+        .zomato::after, .swiggy::after {
+            content: '\00BB';
+            font-size: 2rem;
+            position: absolute;
+            left: 50%;
+            top: -2.25rem;
+            animation: updown 2s ease infinite;
+        }
+        @keyframes updown {
+            0% {
+                transform: translate(-50%, -15%) rotate(90deg);
+            }
+            50% {
+                transform: translate(-50%, 15%) rotate(90deg);
+            }
+            100% {
+                transform: translate(-50%, -15%) rotate(90deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -96,8 +128,8 @@
     <br />
     <div class="heading-2">Shop on Swiggy & Zomato</div>
     <div class="btn-container">
-        <a href="zomato://restaurant/19307919/order" class="zomato" onclick="handleClick('Zomato')">Try on ZOMATO</a>
-        <a href="swiggy://explore?restaurant=phulka%20ghar" class="swiggy" onclick="handleClick('Swiggy')">Try on SWIGGY</a>
+        <a href="zomato://restaurant/19307919/order" class="zomato" onclick="handleClick('Zomato')"></a>
+        <a href="swiggy://explore?restaurant=phulka%20ghar" class="swiggy" onclick="handleClick('Swiggy')"></a>
     </div>
     
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
